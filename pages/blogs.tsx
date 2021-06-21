@@ -1,7 +1,7 @@
 import { InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import Page from "../components/Page";
-import client from "../utils/mongoClient";
+import { connectDB } from "../utils/mongoClient";
 import { BlogPost } from "../utils/typeUtils";
 
 const BlogsIndex = ({
@@ -39,8 +39,7 @@ const BlogsIndex = ({
 );
 
 export const getStaticProps = async () => {
-    await client.connect();
-    const db = client.db("main");
+    const db = await connectDB("main");
     const blogs: BlogPost[] = await db.collection("blogs").find().toArray();
     blogs.forEach((blog) => {
         blog._id = blog._id.toString();
@@ -53,7 +52,6 @@ export const getStaticProps = async () => {
             .toString();
         blog.createdOn = `${date}-${month}-${year}`;
     });
-    await client.close();
 
     return {
         props: {

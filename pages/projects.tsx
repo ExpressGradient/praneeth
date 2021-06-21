@@ -1,5 +1,5 @@
 import { InferGetStaticPropsType } from "next";
-import client from "../utils/mongoClient";
+import { connectDB } from "../utils/mongoClient";
 import { Project } from "../utils/typeUtils";
 import Page from "../components/Page";
 import Link from "next/link";
@@ -62,14 +62,12 @@ const Projects = ({
 );
 
 export const getStaticProps = async () => {
-    await client.connect();
-    const db = client.db("main");
+    const db = await connectDB("main");
     const projects: Project[] = await db
         .collection("projects")
         .find()
         .toArray();
     projects.forEach((project) => (project._id = project._id.toString()));
-    await client.close();
 
     return {
         props: {

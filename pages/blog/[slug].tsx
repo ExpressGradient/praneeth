@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import client from "../../utils/mongoClient";
+import { connectDB } from "../../utils/mongoClient";
 import { BlogPost } from "../../utils/typeUtils";
 import Page from "../../components/Page";
 import Renderer from "../../components/Renderer";
@@ -32,14 +32,12 @@ const Blog = ({ blog }): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    await client.connect();
-    const db = client.db("main");
+    const db = await connectDB("main");
     const blog: BlogPost = await db
         .collection("blogs")
         .findOne({ slug: params.slug });
     blog._id = blog._id.toString();
     blog.createdOn = new Date(Date.parse(blog.createdOn)).toString();
-    await client.close();
 
     return {
         props: {
@@ -50,15 +48,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    await client.connect();
-    const db = client.db("main");
+    const db = await connectDB("main");
     const blogs: BlogPost[] = await db.collection("blogs").find().toArray();
     const paths = blogs.map((blog) => ({ params: { slug: blog.slug } }));
-    await client.close();
 
     return {
         paths,
-        fallback: true,
+        fallback: "blocking",
     };
 };
 
