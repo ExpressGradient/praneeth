@@ -25,10 +25,10 @@ const BlogsIndex = ({
                                     <h4 className="text-lg md:text-xl">
                                         {blog.title}
                                     </h4>
-                                    <p className="text-gray-700">{blog.meta}</p>
-                                    <p className="text-gray-500">
-                                        on {blog.createdOn}
+                                    <p className="text-gray-600 mb-1">
+                                        {blog.meta}
                                     </p>
+                                    <p>on {blog.createdOn}</p>
                                 </a>
                             </Link>
                         </li>
@@ -43,14 +43,7 @@ export const getStaticProps = async () => {
     const blogs: BlogPost[] = await db.collection("blogs").find().toArray();
     blogs.forEach((blog) => {
         blog._id = blog._id.toString();
-        const date = new Date(Date.parse(blog.createdOn)).getDate().toString();
-        const month = new Date(Date.parse(blog.createdOn))
-            .getMonth()
-            .toString();
-        const year = new Date(Date.parse(blog.createdOn))
-            .getFullYear()
-            .toString();
-        blog.createdOn = `${date}-${month}-${year}`;
+        blog.createdOn = new Date(Date.parse(blog.createdOn)).toDateString();
     });
 
     return {
