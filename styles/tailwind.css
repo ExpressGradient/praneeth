@@ -5,3 +5,7 @@
 body {
     @apply font-serif text-white bg-black;
 }
+
+a {
+    @apply hover:underline hover:underline-offset-4;
+}

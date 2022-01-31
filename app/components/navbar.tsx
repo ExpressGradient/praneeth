@@ -9,11 +9,11 @@ export default function Navbar() {
                 </h3>
             </Link>
             <nav>
-                <ul className="flex gap-x-3">
-                    <li className="text-blue-600 hover:underline">
+                <ul className="flex text-blue-500 gap-x-3">
+                    <li>
                         <Link to="/blogs">/blogs</Link>
                     </li>
-                    <li className="text-blue-600 hover:underline">
+                    <li>
                         <Link to="/projects">/projects</Link>
                     </li>
                 </ul>
