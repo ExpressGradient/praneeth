@@ -10,7 +10,10 @@ import type { MetaFunction, LinksFunction } from "remix";
 import styles from "./tailwind.css";
 
 export const meta: MetaFunction = () => {
-    return { title: "Praneeth", description: "Praneeth's Personal Website" };
+    return {
+        title: "Praneeth",
+        description: "Praneeth's Personal Website",
+    };
 };
 
 export const links: LinksFunction = () => {
@@ -41,6 +44,7 @@ export default function App() {
                     name="viewport"
                     content="width=device-width,initial-scale=1"
                 />
+                <meta name="og:image" content="preview_image.png" />
                 <Meta />
                 <Links />
             </head>

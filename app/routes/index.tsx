@@ -25,6 +25,7 @@ export const loader: LoaderFunction = async () => {
                 organizationLink
                 startDate
                 endDate
+                createdAt
             }
         }
     `;
@@ -70,33 +71,39 @@ export default function Home() {
                     </h2>
 
                     <ul className="flex flex-col mt-2 gap-y-3">
-                        {data.journeys.reverse().map((journey) => (
-                            <li
-                                key={journey.id}
-                                className="list-disc list-inside"
-                            >
-                                {journey.endDate ? "Worked" : "Working"} as a{" "}
-                                <span className="font-bold">
-                                    {journey.title}
-                                </span>{" "}
-                                at{" "}
-                                <a
-                                    href={journey.organizationLink}
-                                    className="italic hover:underline hover:underline-offset-4"
+                        {data.journeys
+                            .sort((a, b) => {
+                                return a.createdAt > b.createdAt ? -1 : 1;
+                            })
+                            .map((journey) => (
+                                <li
+                                    key={journey.id}
+                                    className="list-disc list-inside"
                                 >
-                                    {journey.organization}
-                                </a>{" "}
-                                from {journey.startDate.substring(0, 4)}{" "}
-                                {journey.endDate
-                                    ? "to " + journey.endDate.substring(0, 4)
-                                    : ""}
-                                .
-                                <br />
-                                <span className="italic text-gray-300">
-                                    {journey.description}
-                                </span>
-                            </li>
-                        ))}
+                                    {journey.endDate ? "Worked" : "Working"} as
+                                    a{" "}
+                                    <span className="font-bold">
+                                        {journey.title}
+                                    </span>{" "}
+                                    at{" "}
+                                    <a
+                                        href={journey.organizationLink}
+                                        className="italic hover:underline hover:underline-offset-4"
+                                    >
+                                        {journey.organization}
+                                    </a>{" "}
+                                    from {journey.startDate.substring(0, 4)}{" "}
+                                    {journey.endDate
+                                        ? "to " +
+                                          journey.endDate.substring(0, 4)
+                                        : ""}
+                                    .
+                                    <br />
+                                    <span className="italic text-gray-300">
+                                        {journey.description}
+                                    </span>
+                                </li>
+                            ))}
                     </ul>
                 </section>
 

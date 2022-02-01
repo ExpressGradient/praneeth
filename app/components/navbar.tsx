@@ -1,4 +1,4 @@
-import { Link } from "remix";
+import { NavLink, Link } from "remix";
 
 export default function Navbar() {
     return (
@@ -11,10 +11,24 @@ export default function Navbar() {
             <nav>
                 <ul className="flex text-blue-500 gap-x-3">
                     <li>
-                        <Link to="/blogs">/blogs</Link>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? "underline underline-offset-4" : ""
+                            }
+                            to="/blogs"
+                        >
+                            /blogs
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/projects">/projects</Link>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? "underline underline-offset-4" : ""
+                            }
+                            to="/projects"
+                        >
+                            /projects
+                        </NavLink>
                     </li>
                 </ul>
             </nav>

@@ -20,5 +20,20 @@ export type HomeLoaderQuery = {
         organizationLink: string;
         startDate: string;
         endDate: string;
+        createdAt: string;
+    }>;
+};
+
+export type ProjectLoaderQuery = {
+    projects: Array<{
+        id: string;
+        title: string;
+        description: string;
+        projectLink: string;
+        githubLink: string;
+        created: string;
+        image: {
+            url: string;
+        };
     }>;
 };
