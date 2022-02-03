@@ -44,7 +44,10 @@ export default function App() {
                     name="viewport"
                     content="width=device-width,initial-scale=1"
                 />
-                <meta name="og:image" content="preview_image.png" />
+                <meta
+                    name="og:image"
+                    content="https://saipraneeth.in/preview_image.png"
+                />
                 <Meta />
                 <Links />
             </head>

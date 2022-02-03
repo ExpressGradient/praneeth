@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
 
 export const loader: LoaderFunction = async () => {
     return await client.request(gql`
-        {
+        query GetAllProjects {
             projects {
                 id
                 title
