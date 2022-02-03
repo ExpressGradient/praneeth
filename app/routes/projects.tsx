@@ -79,6 +79,11 @@ export default function Projects() {
                             </li>
                         ))}
                 </ul>
+
+                <hr className="invisible" />
+                <hr className="invisible" />
+                <hr className="invisible" />
+                <hr className="invisible" />
             </main>
         </>
     );
