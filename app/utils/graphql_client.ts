@@ -1,8 +1,6 @@
 import { GraphQLClient } from "graphql-request";
 
-export const client = new GraphQLClient(
-    "https://api-ap-south-1.graphcms.com/v2/ckyv4u2o706xr01y28o8sh64y/master"
-);
+export const client = new GraphQLClient("https://praneeth-backend.graphcdn.app");
 
 export type HomeLoaderQuery = {
     shortAbouts: Array<{
