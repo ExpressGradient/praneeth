@@ -1,7 +1,7 @@
 import { GraphQLClient } from "graphql-request";
 
 export const client = new GraphQLClient(
-    "https://praneeth-backend.graphcdn.app"
+    "https://api-ap-south-1.graphcms.com/v2/ckyv4u2o706xr01y28o8sh64y/master"
 );
 
 export type HomeLoaderQuery = {
@@ -36,4 +36,11 @@ export type ProjectLoaderQuery = {
             url: string;
         };
     }>;
+};
+
+export type BlogView = {
+    id: string;
+    content: string;
+    createdAt: string;
+    categories: Array<string>;
 };
