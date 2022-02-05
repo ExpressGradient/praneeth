@@ -1,14 +1,21 @@
 import { gql } from "graphql-request";
-import { LoaderFunction, useLoaderData } from "remix";
-import { BlogView, client } from "~/utils/graphql_client";
+import { LoaderFunction, MetaFunction, useLoaderData } from "remix";
+import { Blog, client } from "~/utils/graphql_client";
 import { marked } from "marked";
 
+export const meta: MetaFunction = ({ data }) => ({
+    title: `Reading Praneeth's ${data.title} Blog Post`,
+    description: data.preview,
+});
+
 export const loader: LoaderFunction = async ({ params }) => {
-    const { blog } = await client.request(
+    const { blog }: { blog: Blog } = await client.request(
         gql`
-            query GetSingleBlogPost($slug: String!) {
+            query GetBlogPost($slug: String!) {
                 blog(where: { slug: $slug }) {
                     id
+                    title
+                    preview
                     content
                     createdAt
                     categories
@@ -24,7 +31,7 @@ export const loader: LoaderFunction = async ({ params }) => {
 
     // Increment views
     await fetch(
-        `https://global-kind-goldfish-31724.upstash.io/incr/${blog.id}`,
+        `https://global-kind-goldfish-31724.upstash.io/hincrby/views/${blog.id}/1`,
         {
             headers: {
                 Authorization:
@@ -37,7 +44,7 @@ export const loader: LoaderFunction = async ({ params }) => {
 };
 
 export default function BlogPostView() {
-    const blog = useLoaderData<BlogView>();
+    const blog = useLoaderData<Blog>();
 
     return (
         <section className="flex flex-col gap-y-4">

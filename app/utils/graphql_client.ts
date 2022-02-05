@@ -1,6 +1,8 @@
 import { GraphQLClient } from "graphql-request";
 
-export const client = new GraphQLClient("https://praneeth-backend.graphcdn.app");
+export const client = new GraphQLClient(
+    "https://praneeth-backend.graphcdn.app"
+);
 
 export type HomeLoaderQuery = {
     shortAbouts: Array<{
@@ -36,9 +38,13 @@ export type ProjectLoaderQuery = {
     }>;
 };
 
-export type BlogView = {
+export type Blog = {
     id: string;
-    content: string;
-    createdAt: string;
+    title: string;
     categories: Array<string>;
+    createdAt: string;
+    preview: string;
+    content: string;
+    slug: string;
+    views: number;
 };
