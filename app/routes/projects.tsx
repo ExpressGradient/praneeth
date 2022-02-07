@@ -57,21 +57,27 @@ export default function Projects() {
                                     <p className="text-sm text-gray-300">
                                         {project.description}
                                     </p>
-                                    <div className="flex text-sm gap-x-3">
+                                    <div className="flex flex-col md:flex-row text-sm gap-3">
                                         <a
-                                            className="flex items-center px-3 py-1 bg-blue-700 rounded gap-x-1"
+                                            className="flex items-center justify-center md:justify-start px-3 py-1 bg-blue-700 rounded gap-x-1"
                                             href={project.projectLink}
                                             aria-label="Project Link"
                                         >
-                                            <img src="link_icon.svg" />
+                                            <img
+                                                src="link_icon.svg"
+                                                alt="Link Icon"
+                                            />
                                             <p>Visit Project</p>
                                         </a>
                                         <a
-                                            className="flex items-center px-3 py-1 bg-gray-600 rounded gap-x-1"
+                                            className="flex items-center justify-center md:justify-start px-3 py-1 bg-gray-600 rounded gap-x-1"
                                             href={project.githubLink}
                                             aria-label="GitHub Link"
                                         >
-                                            <img src="github_icon.svg" />
+                                            <img
+                                                src="github_icon.svg"
+                                                alt="GitHub Icon"
+                                            />
                                             <p>View Source Code</p>
                                         </a>
                                     </div>

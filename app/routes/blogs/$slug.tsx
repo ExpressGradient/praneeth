@@ -67,6 +67,8 @@ export default function BlogPostView() {
             <p className="text-sm">
                 Wrote with 😑 mood on: {new Date(blog.createdAt).toDateString()}
             </p>
+
+            <hr className="invisible mb-12" />
         </section>
     );
 }
