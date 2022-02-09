@@ -46,7 +46,7 @@ export default function BlogsHome() {
     return (
         <>
             <h2 className="text-2xl font-bold">Blog Posts</h2>
-            <ul className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-fr">
+            <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-fr">
                 {blogs
                     .sort((a, b) => (a.createdAt > b.createdAt ? 1 : -1))
                     .map((blog) => (
@@ -75,17 +75,24 @@ export default function BlogsHome() {
                                 <p className="text-gray-300 text-sm">
                                     {blog.preview}
                                 </p>
-                                <p className="text-gray-300 text-sm">
-                                    Created on:{" "}
-                                    {new Date(blog.createdAt).toDateString()}
-                                </p>
-                                <p
-                                    className="text-gray-300 text-sm flex items-center gap-x-1"
-                                    aria-label={`Number of views: ${blog.views}`}
-                                >
-                                    <img src="eye_icon.svg" alt="Eye Icon" />{" "}
-                                    <span>{blog.views}</span>
-                                </p>
+                                <div className="flex items-center justify-between">
+                                    <p className="text-gray-300 text-sm">
+                                        Created on:{" "}
+                                        {new Date(
+                                            blog.createdAt
+                                        ).toDateString()}
+                                    </p>
+                                    <p
+                                        className="text-gray-300 text-sm flex items-center gap-x-1"
+                                        aria-label={`Number of views: ${blog.views}`}
+                                    >
+                                        <img
+                                            src="eye_icon.svg"
+                                            alt="Eye Icon"
+                                        />{" "}
+                                        <span>{blog.views}</span>
+                                    </p>
+                                </div>
                             </Link>
                         </li>
                     ))}
