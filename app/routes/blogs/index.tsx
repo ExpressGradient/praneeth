@@ -48,7 +48,7 @@ export default function BlogsHome() {
             <h2 className="text-2xl font-bold">Blog Posts</h2>
             <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-fr">
                 {blogs
-                    .sort((a, b) => (a.createdAt > b.createdAt ? 1 : -1))
+                    .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
                     .map((blog) => (
                         <li
                             key={blog.id}
