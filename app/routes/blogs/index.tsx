@@ -125,7 +125,7 @@ export default function BlogsHome() {
                 <label className="text-xl font-bold" htmlFor="email">
                     Subscribe to my NewsLetter
                 </label>
-                <div className="flex gap-x-2 mt-3">
+                <div className="flex flex-col gap-y-4 md:flex-row gap-x-2 mt-3">
                     <input
                         type="email"
                         required={true}
