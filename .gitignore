@@ -10,3 +10,4 @@ app/tailwind.css
 
 .idea
 prettier.config.js
+.env
