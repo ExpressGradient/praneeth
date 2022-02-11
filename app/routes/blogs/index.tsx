@@ -11,7 +11,7 @@ import {
 import { Blog, client } from "~/utils/graphql_client";
 import { gql } from "graphql-request";
 import { toast, Toaster } from "react-hot-toast";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export const meta: MetaFunction = () => ({
     title: "Praneeth - Blogs",
@@ -101,12 +101,9 @@ export default function BlogsHome() {
     const blogs = useLoaderData<Array<Blog>>();
     const { state } = useTransition();
     const actionResponse = useActionData<{ message: string; error: string }>();
-    const inputRef = useRef<HTMLInputElement>();
 
     useEffect(() => {
         if (actionResponse?.message) {
-            inputRef!.current!.value = "";
-
             toast(actionResponse.message, {
                 icon: "👋",
             });
@@ -114,8 +111,6 @@ export default function BlogsHome() {
             toast.error(actionResponse.error);
         }
     }, [actionResponse]);
-
-    useEffect(() => inputRef?.current?.focus(), []);
 
     return (
         <>
@@ -130,7 +125,6 @@ export default function BlogsHome() {
                         type="email"
                         required={true}
                         name="email"
-                        ref={inputRef}
                         disabled={state === "submitting"}
                         placeholder="wonderfulyou@email.com"
                         className="w-full px-3 py-2 rounded bg-black text-white border focus:outline-none focus:ring focus:ring-white focus:ring-1"
