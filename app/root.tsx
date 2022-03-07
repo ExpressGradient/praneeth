@@ -1,11 +1,4 @@
-import {
-    Links,
-    LiveReload,
-    Meta,
-    Outlet,
-    Scripts,
-    ScrollRestoration,
-} from "remix";
+import { Links, LiveReload, Meta, Outlet, ScrollRestoration } from "remix";
 import type { MetaFunction, LinksFunction } from "remix";
 import styles from "./tailwind.css";
 
@@ -54,7 +47,7 @@ export default function App() {
             <body>
                 <Outlet />
                 <ScrollRestoration />
-                <Scripts />
+                {/*<Scripts />*/}
                 {process.env.NODE_ENV === "development" && <LiveReload />}
             </body>
         </html>
