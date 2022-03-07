@@ -28,6 +28,10 @@ export const loader: LoaderFunction = async () => {
     `);
 };
 
+export function headers() {
+    return { "Cache-Control": "max-age=900" };
+}
+
 export default function Projects() {
     const data = useLoaderData<ProjectLoaderQuery>();
 

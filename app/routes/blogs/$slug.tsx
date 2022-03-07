@@ -43,6 +43,10 @@ export const loader: LoaderFunction = async ({ params }) => {
     return blog;
 };
 
+export function headers() {
+    return { "Cache-Control": "max-age=1800" };
+}
+
 export default function BlogPostView() {
     const blog = useLoaderData<Blog>();
 

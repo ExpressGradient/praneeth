@@ -97,6 +97,10 @@ export const action: ActionFunction = async ({ request }) => {
     }
 };
 
+export function headers() {
+    return { "Cache-Control": "max-age=60" };
+}
+
 export default function BlogsHome() {
     const blogs = useLoaderData<Array<Blog>>();
     const { state } = useTransition();

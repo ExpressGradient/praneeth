@@ -33,6 +33,10 @@ export const loader: LoaderFunction = async () => {
     return await client.request(query);
 };
 
+export function headers() {
+    return { "Cache-Control": "max-age=900" };
+}
+
 export default function Home() {
     const data = useLoaderData<HomeLoaderQuery>();
 
