@@ -23,6 +23,8 @@ export const loader: LoaderFunction = async () => {
         }
     `);
 
+    console.log(blogs);
+
     const response = await fetch(
         `https://global-kind-goldfish-31724.upstash.io/hgetall/views`,
         {
@@ -40,8 +42,6 @@ export const loader: LoaderFunction = async () => {
     blogs.forEach((blog) => {
         blog["views"] = parseInt(views[views.indexOf(blog.id) + 1]);
     });
-
-    console.log(blogs);
 
     return blogs;
 };
