@@ -8,6 +8,8 @@ export const meta: MetaFunction = () => ({
 });
 
 export const loader: LoaderFunction = async () => {
+    console.log("/blogs hit");
+
     const { blogs }: { blogs: Array<Blog> } = await client.request(gql`
         query GetBlogPosts {
             blogs {
@@ -33,9 +35,13 @@ export const loader: LoaderFunction = async () => {
 
     const { result: views }: { result: Array<string> } = await response.json();
 
+    console.log(views);
+
     blogs.forEach((blog) => {
         blog["views"] = parseInt(views[views.indexOf(blog.id) + 1]);
     });
+
+    console.log(blogs);
 
     return blogs;
 };
@@ -51,17 +57,17 @@ export default function BlogsHome() {
         <>
             <h2 className="text-2xl font-bold">Blog Posts</h2>
 
-            <ul className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-fr">
+            <ul className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2 auto-rows-fr">
                 {blogs
                     .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
                     .map((blog) => (
                         <li
                             key={blog.id}
-                            className="border rounded-md border-white p-4"
+                            className="p-4 border border-white rounded-md"
                         >
                             <Link
                                 to={blog.slug}
-                                className="hover:no-underline flex flex-col gap-y-2"
+                                className="flex flex-col hover:no-underline gap-y-2"
                                 aria-label={`Link to ${blog.title}`}
                             >
                                 <h3 className="text-xl font-bold">
@@ -71,24 +77,24 @@ export default function BlogsHome() {
                                     {blog.categories.map((category) => (
                                         <li
                                             key={category}
-                                            className="border border-white rounded-full px-2 py-1 text-sm bg-gray-700"
+                                            className="px-2 py-1 text-sm bg-gray-700 border border-white rounded-full"
                                         >
                                             {category}
                                         </li>
                                     ))}
                                 </ul>
-                                <p className="text-gray-300 text-sm">
+                                <p className="text-sm text-gray-300">
                                     {blog.preview}
                                 </p>
                                 <div className="flex items-center justify-between">
-                                    <p className="text-gray-300 text-sm">
+                                    <p className="text-sm text-gray-300">
                                         Created on:{" "}
                                         {new Date(
                                             blog.createdAt
                                         ).toDateString()}
                                     </p>
                                     <p
-                                        className="text-gray-300 text-sm flex items-center gap-x-1"
+                                        className="flex items-center text-sm text-gray-300 gap-x-1"
                                         aria-label={`Number of views: ${blog.views}`}
                                     >
                                         <img
