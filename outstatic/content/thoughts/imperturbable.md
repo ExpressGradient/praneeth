@@ -1,6 +1,6 @@
 ---
 title: 'Imperturbable'
-status: 'draft'
+status: 'published'
 author:
   name: 'Sai Praneeth'
   picture: ''
