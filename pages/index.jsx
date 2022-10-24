@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Header from "../shared/header";
 
 export default function Index() {
     return (
@@ -18,22 +19,32 @@ export default function Index() {
             </Head>
 
             <div className="box list gap-y-6 min-h-screen">
-                <header className="list gap-y-6">
-                    <h1>Sai Praneeth</h1>
+                <Header />
 
-                    <p id="short-description">
-                        Gear Head | Computer Programmer | Writer | Shutterbug |
-                        Bibliophile
-                    </p>
-                </header>
+                <hr className="border border-gray-500" />
 
                 <main className="list gap-y-6">
-                    <section id="thoughts">
+                    <section id="thoughts" className="list gap-y-4">
                         <h2 className="section-heading">Thoughts</h2>
+                        <p>No thoughts as of now...</p>
                     </section>
 
-                    <section id="snaps">
+                    <section id="snaps" className="list gap-y-4">
                         <h2 className="section-heading">Snaps</h2>
+                        <p>No snaps as of now...</p>
+                    </section>
+
+                    <section id="books" className="list gap-y-4">
+                        <h2 className="section-heading">Books</h2>
+                        <ul className="list list-inside list-disc gap-y-2">
+                            <li>Atomic Habits by John Clear</li>
+                            <li>
+                                The Hitchhiker's Guide to the Galaxy by Douglas
+                                Adams
+                            </li>
+                            <li>The Foundation by Issac Asimov</li>
+                            <li>The Theory of Everything by Stephen Hawking</li>
+                        </ul>
                     </section>
 
                     <section id="jobs" className="list gap-y-4">
@@ -50,6 +61,8 @@ export default function Index() {
                         </ul>
                     </section>
                 </main>
+
+                <hr className="border border-gray-500" />
 
                 <footer id="contact">
                     <p>
