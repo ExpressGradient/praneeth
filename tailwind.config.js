@@ -1,9 +1,11 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./app/**/*.tsx"],
+    content: ["./pages/**/*.jsx", "./shared/**/*.jsx"],
     theme: {
         extend: {
             fontFamily: {
-                serif: ["Lato", "sans-serif"],
+                serif: ["IBM Plex Sans", "sans-serif"],
+                mono: ["Source Code Pro", "monospace"],
             },
         },
     },

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+body {
+    @apply bg-zinc-800 text-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-serif font-bold;
+}
+
+h1 {
+    @apply text-3xl lg:text-4xl;
+}
+
+h2 {
+    @apply text-2xl lg:text-3xl;
+}
+
+p {
+    @apply font-mono text-sm;
+}
+
+.box {
+    @apply m-4 lg:w-1/2 lg:mx-auto;
+}
