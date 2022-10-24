@@ -3,16 +3,19 @@
 @tailwind components;
 
 body {
-    @apply bg-zinc-800 text-white;
+    @apply bg-zinc-800 text-white font-mono text-sm;
 }
 
 h1,
 h2,
-h3,
+h3 {
+    @apply font-bold font-serif;
+}
+
 h4,
 h5,
 h6 {
-    @apply font-serif font-bold;
+    @apply font-semibold font-serif;
 }
 
 h1 {
@@ -23,10 +26,26 @@ h2 {
     @apply text-2xl lg:text-3xl;
 }
 
+h3 {
+    @apply text-xl lg:text-2xl;
+}
+
 p {
     @apply font-mono text-sm;
 }
 
+a {
+    @apply text-blue-500 rounded hover:underline hover:underline-offset-2 focus:outline-none focus:ring-1 focus:ring-offset-4 focus:ring-white focus:ring-offset-zinc-800;
+}
+
 .box {
-    @apply m-4 lg:w-1/2 lg:mx-auto;
+    @apply m-6 lg:w-1/2 lg:mx-auto;
+}
+
+.list {
+    @apply flex flex-col;
+}
+
+.section-heading {
+    @apply text-gray-200 underline underline-offset-2;
 }
