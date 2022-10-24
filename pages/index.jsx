@@ -39,8 +39,8 @@ export default function Index() {
                         <ul className="list list-inside list-disc gap-y-2">
                             <li>Atomic Habits by John Clear</li>
                             <li>
-                                The Hitchhiker's Guide to the Galaxy by Douglas
-                                Adams
+                                The Hitchhiker&apos;s Guide to the Galaxy by
+                                Douglas Adams
                             </li>
                             <li>The Foundation by Issac Asimov</li>
                             <li>The Theory of Everything by Stephen Hawking</li>
