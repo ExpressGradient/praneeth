@@ -1,8 +1,10 @@
 import Head from "next/head";
+import Link from "next/link";
 import Footer from "../shared/footer";
 import Header from "../shared/header";
+import { getThoughts } from "../utils/content";
 
-export default function Index() {
+export default function Index({ thoughts }) {
     return (
         <>
             <Head>
@@ -18,7 +20,7 @@ export default function Index() {
                 />
             </Head>
 
-            <div className="box list gap-y-6 min-h-screen">
+            <div className="box list gap-y-6">
                 <Header />
 
                 <hr className="border border-gray-500" />
@@ -26,7 +28,18 @@ export default function Index() {
                 <main className="list gap-y-6">
                     <section id="thoughts" className="list gap-y-4">
                         <h2 className="section-heading">Thoughts</h2>
-                        <p>No thoughts as of now...</p>
+                        <ul className="list list-inside list-disc gap-y-2">
+                            {thoughts.map((thought) => (
+                                <li key={thought.id}>
+                                    <Link href={`/thoughts/${thought.slug}`}>
+                                        <a>
+                                            {thought.title} on{" "}
+                                            {thought.publishedAt}
+                                        </a>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
                     </section>
 
                     <section id="snaps" className="list gap-y-4">
@@ -68,4 +81,10 @@ export default function Index() {
             </div>
         </>
     );
+}
+
+export async function getStaticProps() {
+    const thoughts = getThoughts();
+
+    return { props: { thoughts } };
 }

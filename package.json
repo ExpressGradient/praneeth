@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "front-matter": "^4.0.2",
+    "marked": "^4.1.1",
     "next": "12.3.1",
-    "outstatic": "^0.0.27-rc",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

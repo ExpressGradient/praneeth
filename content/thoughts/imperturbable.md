@@ -1,16 +1,11 @@
 ---
-title: 'imperturbable'
-status: 'published'
-author:
-  name: 'Praneeth'
-  picture: 'https://avatars.githubusercontent.com/u/59659961?v=4'
-slug: 'imperturbable'
-description: ''
-coverImage: ''
-publishedAt: '2022-10-24T20:00:02.091Z'
+id: 1
+title: "Imperturbable"
+status: "published"
+slug: "imperturbable"
+publishedAt: "2022-10-24"
 ---
 
-```markdown
 Either frustrated/angry or happy. These were the only states of mind I had a few years ago. Transitioning between these was a quick process, only a few triggers were required.
 
 > One's anger is one's enemy and one's peace is one's protection - Baddena Bhupaludu
@@ -24,5 +19,3 @@ By being like this, I get to enjoy a lot of benefits like not getting a stupid a
 My answer, you don't need to use violent or aggressive methods to accomplish truth or justice.
 
 Conclusion: Rise over your emotions. Be composed. Trust your logics instead of emotions/guts.
-```
-
