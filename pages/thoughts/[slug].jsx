@@ -14,7 +14,7 @@ export default function Thought({ thought }) {
                 />
                 <meta
                     property="og:image"
-                    content={`/api/og?description=Now reading ${thought.title} thought post`}
+                    content={`../../api/og?description=Now reading ${thought.title} thought post`}
                 />
             </Head>
 
@@ -26,7 +26,7 @@ export default function Thought({ thought }) {
 
             <main>
                 <article
-                    className="prose prose-invert md:prose-lg lg:prose-xl"
+                    className="prose prose-invert md:prose-lg lg:prose-lg"
                     dangerouslySetInnerHTML={{ __html: thought.body }}
                 />
             </main>
