@@ -14,7 +14,7 @@ export default function Thought({ thought }) {
                 />
                 <meta
                     property="og:image"
-                    content={`../../api/og?description=Now reading ${thought.title} thought post`}
+                    content={`/../../api/og?description=Now reading ${thought.title} thought post`}
                 />
             </Head>
 
