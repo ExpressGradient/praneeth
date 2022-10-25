@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Footer from "../../shared/footer";
 import Header from "../../shared/header";
 import { getThought, getThoughts } from "../../utils/content";
@@ -5,6 +6,18 @@ import { getThought, getThoughts } from "../../utils/content";
 export default function Thought({ thought }) {
     return (
         <div className="box list gap-y-6">
+            <Head>
+                <title>Sai Praneeth - {thought.title}</title>
+                <meta
+                    name="description"
+                    content={`Now reading ${thought.title} thought post`}
+                />
+                <meta
+                    property="og:image"
+                    content={`/api/og?description=Now reading ${thought.title} thought post`}
+                />
+            </Head>
+
             <Header
                 shortDesc={`Now reading the "${thought.title}" thought. Published on ${thought.publishedAt}.`}
             />

@@ -18,6 +18,7 @@ export default function Index({ thoughts }) {
                     name="keywords"
                     content="Sai Praneeth, Personal Website, Blog"
                 />
+                <meta property="og:image" content="/api/og" />
             </Head>
 
             <div className="box list gap-y-6">

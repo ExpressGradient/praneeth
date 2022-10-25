@@ -3,7 +3,7 @@
 @tailwind components;
 
 body {
-    @apply bg-zinc-800 text-white font-mono text-sm;
+    @apply bg-zinc-800 text-white font-mono text-sm lg:text-base;
 }
 
 h1,
@@ -31,7 +31,7 @@ h3 {
 }
 
 p {
-    @apply font-mono text-sm lg:text-base;
+    @apply font-mono;
 }
 
 a {
