@@ -31,7 +31,7 @@ h3 {
 }
 
 p {
-    @apply font-mono text-sm;
+    @apply font-mono text-sm lg:text-base;
 }
 
 a {

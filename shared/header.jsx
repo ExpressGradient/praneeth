@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({ shortDesc }) {
     return (
         <header className="list gap-y-6">
             <h1>
@@ -10,8 +10,8 @@ export default function Header() {
             </h1>
 
             <p id="short-description">
-                Gear Head | Computer Programmer | Writer | Shutterbug |
-                Bibliophile
+                {shortDesc ??
+                    "Gear Head | Computer Programmer | Writer | Shutterbug | Bibliophile"}
             </p>
         </header>
     );
