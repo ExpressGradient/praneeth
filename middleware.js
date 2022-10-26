@@ -5,7 +5,12 @@ export async function middleware(req) {
     const [_, topic, post] = req.nextUrl.pathname.split("/");
 
     if (topic === "thoughts") {
-        await incrementThoughtView(req.ip, post);
+        try {
+            await incrementThoughtView(req.ip, post);
+        } catch (err) {
+            console.error("Failed to increment views");
+            console.error(err);
+        }
     }
 
     return NextResponse.next();
