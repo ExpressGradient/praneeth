@@ -4,10 +4,12 @@ import Header from "../../shared/header";
 import { getThought, getThoughts } from "../../utils/content";
 
 export default function Thought({ thought }) {
+    const title = `Sai Praneeth's Thought: ${thought.title}`;
+
     return (
         <div className="box list gap-y-6">
             <Head>
-                <title>Sai Praneeth - {thought.title}</title>
+                <title>{title}</title>
                 <meta
                     name="description"
                     content={`Now reading ${thought.title} thought post`}

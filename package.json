@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@upstash/redis": "^1.15.0",
     "@vercel/og": "^0.0.20",
     "front-matter": "^4.0.2",
     "marked": "^4.1.1",
