@@ -2,7 +2,7 @@ import { ImageResponse } from "@vercel/og";
 
 export const config = { runtime: "experimental-edge" };
 
-export default function (req) {
+export default function og(req) {
     const { searchParams } = new URL(req.url);
 
     return new ImageResponse(

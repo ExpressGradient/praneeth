@@ -24,9 +24,9 @@ export default function Thought({ thought }) {
 
             <hr className="border border-gray-500" />
 
-            <main>
+            <main className="max-w-none">
                 <article
-                    className="prose prose-invert md:prose-lg lg:prose-lg"
+                    className="prose prose-invert prose-sm lg:prose-base w-full max-w-none mx-auto"
                     dangerouslySetInnerHTML={{ __html: thought.body }}
                 />
             </main>
