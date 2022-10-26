@@ -19,6 +19,16 @@ export default function Index({ thoughts }) {
                     content="Sai Praneeth, Personal Website, Blog"
                 />
                 <meta property="og:image" content="/api/og" />
+
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:site" content="@ExpressGradient" />
+                <meta name="twitter:title" content="Sai Praneeth" />
+                <meta
+                    name="twitter:description"
+                    content="Gear Head | Computer Programmer | Writer | Shutterbug |
+                        Bibliophile"
+                />
+                <meta name="twitter:image" content="/api/og" />
             </Head>
 
             <div className="box list gap-y-6">

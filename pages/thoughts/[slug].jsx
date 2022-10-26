@@ -5,18 +5,25 @@ import { getThought, getThoughts } from "../../utils/content";
 
 export default function Thought({ thought }) {
     const title = `Sai Praneeth's Thought: ${thought.title}`;
+    const description = `Now reading ${thought.title} thought post`;
 
     return (
         <div className="box list gap-y-6">
             <Head>
                 <title>{title}</title>
-                <meta
-                    name="description"
-                    content={`Now reading ${thought.title} thought post`}
-                />
+                <meta name="description" content={description} />
                 <meta
                     property="og:image"
-                    content={`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?description=Now reading ${thought.title} thought post`}
+                    content={`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?description=${description}`}
+                />
+
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:site" content="@ExpressGradient" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta
+                    name="twitter:image"
+                    content={`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?description=${description}`}
                 />
             </Head>
 
