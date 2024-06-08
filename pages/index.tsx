@@ -28,15 +28,15 @@ export default function Index() {
           <h4 className="text-lg lg:text-xl font-black uppercase">About</h4>
 
           <p>
-            Hey there! I’m Sai, a deep learning engineer from Hyderabad, now
-            living in Bengaluru. I started at{" "}
+            Hey there! I&apos;m Sai, a deep learning engineer from Hyderabad,
+            now living in Bengaluru. I started at{" "}
             <a href="https://thouc-labs.ai" className="text-blue-500">
               Thoucentric Labs
             </a>{" "}
             in 2022, kicking off with Next.js and Postgres before diving into
-            Deep Learning. Now, I’m all about text, images, and figuring out how
-            news can mess with forecasts. My latest obsession? Seeing just how
-            powerful tiny language models can be.
+            Deep Learning. Now, I&apos;m all about text, images, and figuring
+            out how news can mess with forecasts. My latest obsession? Seeing
+            just how powerful tiny language models can be.
           </p>
 
           <br />
@@ -54,7 +54,8 @@ export default function Index() {
           <p>
             I recently got into speedcubing—my best time is 1:15, and I&apos;m
             determined to break the 1-minute mark. When I need a break, I
-            binge-watch "The Big Bang Theory," "Dexter," and "Modern Family."
+            binge-watch &ldquo;The Big Bang Theory,&rdquo; &ldquo;Dexter,&rdquo;
+            and &ldquo;Modern Family.&rdquo;
           </p>
 
           <br />
