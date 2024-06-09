@@ -79,6 +79,12 @@ export default function Index() {
           <p>Welcome to my world. It&apos;s a bit messy.</p>
         </div>
       </main>
+
+      <footer className={`${redditMono.className} m-4 lg:w-1/2 lg:mx-auto`}>
+        <Link href="/api/admin" className="text-xs text-blue-500">
+          Admin
+        </Link>
+      </footer>
     </>
   );
 }
