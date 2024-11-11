@@ -3,9 +3,25 @@
 @tailwind utilities;
 
 body {
-    @apply bg-black text-white
+    @apply bg-cyan-100 text-purple-800
 }
 
 a {
-    @apply hover:underline hover:underline-offset-2
+    @apply hover:text-pink-600
+}
+
+article {
+    @apply space-y-4 bg-white p-6 shadow-lg border-4 border-pink-500
+}
+
+article h1 {
+    @apply text-4xl text-purple-700
+}
+
+#published-on {
+    @apply text-sm text-blue-600
+}
+
+article {
+    @apply text-blue-700
 }

@@ -1,8 +1,9 @@
 import Head from "next/head";
-import { Reddit_Mono } from "next/font/google";
+import { Rubik_Mono_One } from "next/font/google";
 import Link from "next/link";
+import Header from "@/components/Header.tsx";
 
-const redditMono = Reddit_Mono({ subsets: ["latin"] });
+const rubikMonoOne = Rubik_Mono_One({ weight: "400", subsets: ["latin"] });
 
 export default function Index() {
   return (
@@ -15,21 +16,13 @@ export default function Index() {
         />
       </Head>
 
-      <header
-        className={`${redditMono.className} m-4 text-center lg:text-left lg:w-1/2 lg:mx-auto`}
-      >
-        <h2 className="text-2xl lg:text-3xl font-black uppercase">
-          <Link href="/">Diddigam Sai Praneeth</Link>
-        </h2>
-      </header>
+      <Header />
 
-      <main className={`${redditMono.className} m-4 lg:w-1/2 lg:mx-auto`}>
-        <div>
-          <h4 className="text-lg lg:text-xl font-black uppercase">About</h4>
-
+      <main className={`${rubikMonoOne.className} container mx-auto p-4`}>
+        <section className="bg-white p-6 shadow-lg border-4 border-purple-500">
           <p>
             Hey there! I&apos;m Sai, a deep learning engineer from Hyderabad,
-            now living in Bengaluru. I started at{" "}
+            now living in Bengaluru. I started my career at{" "}
             <a href="https://thouc-labs.ai" className="text-blue-500">
               Thoucentric Labs
             </a>{" "}
@@ -46,23 +39,22 @@ export default function Index() {
             dinner out or a 1000km ride, 4-day trip to an off-grid coffee
             estate. I&apos;m a huge fan of Euro bikes, especially Ducati and
             Triumph. On weekends, you&apos;ll find me glued to F1 races,
-            cheering for Sainz and Alonso like my life depends on it.
+            cheering for Verstappen and Sainz like my life depends on it.
           </p>
 
           <br />
 
           <p>
             I recently got into speedcubing—my best time is 1:15, and I&apos;m
-            determined to break the 1-minute mark. When I need a break, I
-            binge-watch &ldquo;The Big Bang Theory,&rdquo; &ldquo;Dexter,&rdquo;
-            and &ldquo;Modern Family.&rdquo;
+            determined to break the 1-minute mark. When I need a break, I watch
+            &ldquo;The Big Bang Theory&rdquo;, and &ldquo;House, M.D.&rdquo;
           </p>
 
           <br />
 
           <p>
             I&apos;m a world-class introvert with a tiny circle of friends. My
-            dream job? One where I get to do math all day. I really miss it.
+            dream job? One where I get to do math all day.
           </p>
 
           <br />
@@ -77,10 +69,10 @@ export default function Index() {
           <br />
 
           <p>Welcome to my world. It&apos;s a bit messy.</p>
-        </div>
+        </section>
       </main>
 
-      <footer className={`${redditMono.className} m-4 lg:w-1/2 lg:mx-auto`}>
+      <footer className={`${rubikMonoOne.className} my-3 mx-6`}>
         <Link href="/api/admin" className="text-xs text-blue-500">
           Admin
         </Link>
