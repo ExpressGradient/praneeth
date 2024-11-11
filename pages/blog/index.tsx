@@ -5,7 +5,15 @@ import Header from "@/components/Header";
 
 const rubikMonoOne = Rubik_Mono_One({ weight: "400", subsets: ["latin"] });
 
-function ArticleLink({ slug, title, publishedOn }) {
+function ArticleLink({
+  slug,
+  title,
+  publishedOn,
+}: {
+  slug: string;
+  title: string;
+  publishedOn: string;
+}) {
   return (
     <li className="bg-white p-4 shadow-lg border-2 border-blue-500">
       <Link href={`/blog/${slug}`} className="block hover:text-pink-600">
