@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Rubik_Mono_One } from "next/font/google";
 import Link from "next/link";
-import Header from "@/components/Header.tsx";
+import Header from "@/components/Header";
 
 const rubikMonoOne = Rubik_Mono_One({ weight: "400", subsets: ["latin"] });
 
