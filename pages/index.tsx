@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { Rubik_Mono_One } from "next/font/google";
+import { Borel } from "next/font/google";
 import Link from "next/link";
 import Header from "@/components/Header";
 
-const rubikMonoOne = Rubik_Mono_One({ weight: "400", subsets: ["latin"] });
+const borel = Borel({ weight: "400", subsets: ["latin"] });
 
 export default function Index() {
   return (
@@ -18,7 +18,7 @@ export default function Index() {
 
       <Header />
 
-      <main className={`${rubikMonoOne.className} container mx-auto p-4`}>
+      <main className={`${borel.className} container mx-auto p-4`}>
         <section className="bg-white p-6 shadow-lg border-4 border-purple-500">
           <p>
             Hey there! I&apos;m Sai, a deep learning engineer from Hyderabad,
@@ -72,7 +72,7 @@ export default function Index() {
         </section>
       </main>
 
-      <footer className={`${rubikMonoOne.className} my-3 mx-6`}>
+      <footer className={`${borel.className} my-3 mx-6`}>
         <Link href="/api/admin" className="text-xs text-blue-500">
           Admin
         </Link>

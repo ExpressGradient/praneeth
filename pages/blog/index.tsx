@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { Rubik_Mono_One } from "next/font/google";
+import { Borel } from "next/font/google";
 import Link from "next/link";
 import Header from "@/components/Header";
 
-const rubikMonoOne = Rubik_Mono_One({ weight: "400", subsets: ["latin"] });
+const borel = Borel({ weight: "400", subsets: ["latin"] });
 
 function ArticleLink({
   slug,
@@ -34,7 +34,7 @@ export default function BlogIndex() {
 
       <Header />
 
-      <main className={`${rubikMonoOne.className} container mx-auto p-4`}>
+      <main className={`${borel.className} container mx-auto p-4`}>
         <ul className="space-y-4">
           <ArticleLink
             slug={"hello-world"}
