@@ -1,48 +1,32 @@
-import Head from "next/head";
-import { Borel } from "next/font/google";
+import Layout from "../../components/Layout";
 import Link from "next/link";
-import Header from "@/components/Header";
+import { getBlogPosts } from "../../lib/blog";
 
-const borel = Borel({ weight: "400", subsets: ["latin"] });
-
-function ArticleLink({
-  slug,
-  title,
-  publishedOn,
-}: {
-  slug: string;
-  title: string;
-  publishedOn: string;
-}) {
+export default function BlogIndex({ posts }: any) {
   return (
-    <li className="bg-white p-4 shadow-lg border-2 border-blue-500">
-      <Link href={`/blog/${slug}`} className="block hover:text-pink-600">
-        <h2 className="text-2xl mb-2 text-purple-700">{title}</h2>
-        <p className="text-sm text-blue-600">{publishedOn}</p>
-      </Link>
-    </li>
+    <Layout title="Blog Posts">
+      <h1 className="text-3xl font-bold mb-4">Blog Posts</h1>
+      <ul className="space-y-4">
+        {posts.map((post: any) => (
+          <li key={post.slug}>
+            <Link href={`/blog/${post.slug}`} className="block">
+              <h2 className="text-xl font-semibold text-blue-600 hover:underline">
+                {post.title}
+              </h2>
+              <p className="text-gray-600">{post.date}</p>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </Layout>
   );
 }
 
-export default function BlogIndex() {
-  return (
-    <>
-      <Head>
-        <title>Sai Praneeth - Blog</title>
-        <meta name="description" content="Sai Praneeth - Blog" />
-      </Head>
-
-      <Header />
-
-      <main className={`${borel.className} container mx-auto p-4`}>
-        <ul className="space-y-4">
-          <ArticleLink
-            slug={"hello-world"}
-            title={"Hello World"}
-            publishedOn={"11-11-2024"}
-          />
-        </ul>
-      </main>
-    </>
-  );
+export async function getStaticProps() {
+  const posts = getBlogPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
 }
