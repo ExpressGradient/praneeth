@@ -1,0 +1,6 @@
+- Engineer, want to make machines learn.
+- (wannabe) Musician, trying to make some bass.
+- Biker, Huge fan of all things automotive.
+- Weekends, I glue myself to the deadly motorsport races.
+- GPUs and Parallel Programming fascinate me lately.
+- Adrenaline junkie, like to live on the edge.

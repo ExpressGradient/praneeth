@@ -1,0 +1,24 @@
+---
+title: "Drug Addiction"
+date: "2024-12-17"
+---
+
+We are all addicts. Not to cocaine, alcohol, or opioids—no, our addiction is far more subtle, far more insidious. It’s dopamine. The drug that already lives in our brains, released not when we feel fulfilled, but when we anticipate reward. A swipe, a click, a scroll. A match, a notification, a new video. Each action rewards us with a hit, and we keep chasing it. It’s the same cycle as any other addiction: anticipation, hit, brief satisfaction, and then the craving begins again. Only this addiction doesn’t need a dealer or a pipe—it’s in the palms of our hands, served to us endlessly by screens and algorithms that know our brains better than we do.
+
+Dopamine once served us well. It was a survival tool—a compass that pushed us toward the things that mattered. Hunting for food, building relationships, solving problems, creating something out of nothing. The reward came not just from the result but from the struggle itself. Effort led to fulfillment, and the brain rewarded us for it. But today, the world has hijacked this system. We don’t need to hunt anymore. We don’t need to struggle for connection. We don’t need to wait, think, or work hard for reward. It’s everywhere—cheap, easy, instant. Every notification, every swipe, every binge-worthy video floods the brain with dopamine, over and over again.
+
+The brain is an adaptive machine—neuroplasticity at its finest. It rewires itself according to what we demand of it. If we challenge it with complexity, it grows stronger. If we embrace boredom and stillness, it wanders into creativity. But when we flood it with constant stimulation, when we numb it with cheap hits of dopamine, it adapts to that too. It rewires for instant gratification and nothing more. The result? Focus dwindles. Patience disappears. Creativity dies. The thought engine that once roared with original ideas grows silent.
+
+This is where we are now. We can’t sit with ourselves anymore. Loneliness, stress, boredom—these feelings used to have purpose. They pushed us to act, to grow, to connect with others, to create something meaningful. Now they trigger panic. Loneliness drives us to scroll through strangers’ lives. Stress makes us binge-watch until the world fades away. Boredom sends us diving into endless short videos, designed to hold our attention for seconds, not hours. We numb the discomfort. We numb the thought engine.
+
+The irony is that this numbing feels good in the moment. It doesn’t hurt—at least not immediately. But the cost is immense. We are eroding the very capabilities that make us human. The ability to think deeply. The patience to sit with a complex problem. The space to let our minds wander into strange and beautiful ideas. Creativity, innovation, critical thinking—these are not inherent. They are cultivated, generation after generation. But what happens when a generation stops using them? What happens when our children grow up overstimulated and distracted, never learning to sit with boredom, never feeling the satisfaction of effort? The thought engine will not pass itself down. If we let it die, it won’t come back.
+
+We think we are evolving—but for what? Not to survive, not to thrive. We are evolving to keep up. To not miss out. Algorithms have taken our free will, feeding us what we should watch, what we should want, what we should care about. We don’t choose anymore. We react. And with every reaction, we move further from ourselves. Further from the deep wells of creativity and thought that built everything we know. We are becoming passive in our own lives, letting external systems shape our desires, decisions, and identities.
+
+This isn’t just about now. The effects of this addiction ripple outward—into families, societies, and future generations. We are passing down weaker minds, dulled by constant distraction. The long stretches of focus and effort that once defined human progress are being replaced by fragmented attention and cheap rewards. If we keep this up, the decline won’t be sudden. It will be quiet, comfortable, and irreversible. The thought engine will stall. The spark will die. And no one will notice—because no one will remember what it felt like to think deeply, to create something real, or to sit alone with their thoughts and let them wander.
+
+Maybe this is just a phase. Maybe humanity will wake up. Maybe we’ll learn to put the devices down, to reclaim stillness, to let boredom guide us back to creativity. Or maybe we won’t. Maybe we’ll keep numbing ourselves until there’s nothing left to numb. Until the brain—our greatest evolutionary gift—becomes nothing but a hollow machine, endlessly craving hits it can no longer feel.
+
+I don’t know what happens next. But I do know this: we are all addicts.
+
+And addiction never ends well.
