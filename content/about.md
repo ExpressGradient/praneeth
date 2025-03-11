@@ -4,3 +4,5 @@
 - Weekends, I glue myself to the deadly motorsport races.
 - GPUs and Parallel Programming fascinate me lately.
 - Adrenaline junkie, like to live on the edge.
+- [Find my shitty code here](https://github.com/ExpressGradient)
+- [Find my shitposting here](https://x.com/ExpressGradient)
