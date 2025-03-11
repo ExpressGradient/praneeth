@@ -9,3 +9,7 @@
 .prose p {
   @apply mb-4;
 }
+
+.prose a {
+  @apply text-blue-600
+}
