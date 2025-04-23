@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-import Parkinsans from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
 
-const parkinsans = Parkinsans({ src: "./Parkinsans-Variable.ttf" });
+const jetbrains_mono = JetBrains_Mono({
+  subsets: ["latin"],
+});
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,7 +18,7 @@ export default function Layout({
   description = "Learn more about Sai Praneeth",
 }: LayoutProps) {
   return (
-    <div className={`${parkinsans.className} max-w-2xl mx-auto px-4 py-8`}>
+    <div className={`${jetbrains_mono.className} max-w-2xl mx-auto px-4 py-8`}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -34,6 +36,11 @@ export default function Layout({
             <li>
               <Link href="/blog" className="text-blue-600 hover:underline">
                 Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/ml" className="text-blue-600 hover:underline">
+                ML
               </Link>
             </li>
           </ul>

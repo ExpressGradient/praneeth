@@ -11,9 +11,9 @@ interface HomeProps {
 export default function Home({ about }: HomeProps) {
   return (
     <Layout>
-      <h1 className="text-3xl font-bold mb-4">Diddigam Sai Praneeth</h1>
+      <h1 className="text-3xl font-extrabold mb-4">Diddigam Sai Praneeth</h1>
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">About Me</h2>
+        <h2 className="text-2xl font-bold mb-2">About Me</h2>
         <div className="prose" dangerouslySetInnerHTML={{ __html: about }} />
       </section>
     </Layout>
