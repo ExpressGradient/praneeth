@@ -11,7 +11,7 @@ When humans label something as "intelligent", we imply understanding, a grasp of
 
 Yet, before dismissing these agents as merely mechanical, we must reflect: What exactly does it mean when we humans claim to "understand" something? Our sense of understanding is deeply tied to causal reasoning, semantics, and the context of accumulated knowledge. But fundamentally, isn't human cognition also driven by reward signals, dopamine hits that reinforce beneficial actions and behaviors? Aren't we, at our core, sophisticated reward hackers, shaped by millions of years of evolutionary pretraining?
 
-Indeed, unlike RL agents who begin training from a random initialization, humans enter the world pretrained. Evolutionary pressures have finely tuned our instincts, biases, and intuitions over thousans of generations. We effortlessly generalize from minimal examples, reason by analogy, and rapidly adapt to new environments, skills RL agents must painstakingly acquire through immense trial and error.
+Indeed, unlike RL agents who begin training from a random initialization, humans enter the world pretrained. Evolutionary pressures have finely tuned our instincts, biases, and intuitions over thousands of generations. We effortlessly generalize from minimal examples, reason by analogy, and rapidly adapt to new environments, skills RL agents must painstakingly acquire through immense trial and error.
 
 This juxtaposition offers two intriguing possibilities:
 
