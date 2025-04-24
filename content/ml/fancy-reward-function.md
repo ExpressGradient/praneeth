@@ -1,5 +1,5 @@
 ---
-title: "Reinforcement Learning"
+title: "You are just a fancy reward function, bro"
 date: "2025-04-23"
 ---
 
