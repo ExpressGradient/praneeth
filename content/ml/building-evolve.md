@@ -87,6 +87,6 @@ Here's what this Frankenstein system actually does:
 
 Here's the code if you want to read it, clone it, run it, or regret your life choices: [GitHub](https://github.com/think-a-tron/evolve)
 
-If you see me doing crossover next week or trying to evolve merge sort, please stop me. This rabbit hold has no end.
+If you see me doing crossover next week or trying to evolve merge sort, please stop me. This rabbit hole has no end.
 
 Kthnxbye.
