@@ -1,5 +1,5 @@
 ---
-title: "Replicating AlphaEvolve and getting punched in the face"
+title: "Replicating AlphaEvolve"
 date: "2025-05-19"
 ---
 
