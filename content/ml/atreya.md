@@ -73,7 +73,7 @@ What I found was shocking: SOTA agentic search systems perform abysmally here.
 
 My approach using GPT-5-mini as a strict judge, hit 38/111 = ~34% accuracy. That's a huge relative gain. Even if a few ground truths in the benchmark are debatable, the result is clear: **structured orchestration beats brute-force agentic search**.
 
-<img width="2671" height="1770" alt="seal0_accuracy_benchmark_aesthetic" src="https://github.com/user-attachments/assets/2b53dad3-d26d-4729-93e2-0bce39f9a2c1" />
+![Benchmark Results](https://github.com/user-attachments/assets/2b53dad3-d26d-4729-93e2-0bce39f9a2c1)
 
 ## knobs, Controls, and Next Steps
 One of the strengths of this system is how tunable it is:
