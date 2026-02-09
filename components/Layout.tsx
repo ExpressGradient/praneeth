@@ -64,10 +64,16 @@ export default function Layout({
 
         <main>{children}</main>
 
-        <footer className="mt-20 pt-8 border-t border-[#1a1a1a]">
+        <footer className="mt-20 pt-8 border-t border-[#1a1a1a] flex items-center justify-between">
           <p className="text-[#525252] text-xs">
             &copy; {new Date().getFullYear()} Sai Praneeth
           </p>
+          <Link
+            href="/api/admin"
+            className="text-[#525252] text-xs hover:text-[#a3a3a3] transition-colors duration-200"
+          >
+            admin
+          </Link>
         </footer>
       </div>
     </div>
