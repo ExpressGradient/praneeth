@@ -3,9 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import Markdoc from "@markdoc/markdoc";
 
-const postsDirectory = path.join(process.cwd(), "content", "ml");
+const postsDirectory = path.join(process.cwd(), "content", "lab");
 
-export function getMLPosts() {
+export function getLabPosts() {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, "");
@@ -23,7 +23,7 @@ export function getMLPosts() {
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export async function getMlPost(slug: string) {
+export async function getLabPost(slug: string) {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);

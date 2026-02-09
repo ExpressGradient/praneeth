@@ -1,8 +1,9 @@
 import Layout from "../../components/Layout";
-import { getMlPost, getMLPosts } from "@/lib/ml";
+import Link from "next/link";
+import { getLabPost, getLabPosts } from "@/lib/lab";
 import type { GetStaticProps, GetStaticPaths } from "next";
 
-interface MLPostProps {
+interface LabPostProps {
   post: {
     slug: string;
     title: string;
@@ -11,12 +12,20 @@ interface MLPostProps {
   };
 }
 
-export default function MLPost({ post }: MLPostProps) {
+export default function LabPost({ post }: LabPostProps) {
   return (
-    <Layout title={`${post.title}`}>
+    <Layout title={post.title}>
       <article>
-        <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-        <p className="text-gray-600 mb-4">{post.date}</p>
+        <div className="mb-10">
+          <Link
+            href="/lab"
+            className="text-[#525252] text-sm hover:text-[#a3a3a3] transition-colors duration-200"
+          >
+            &larr; back
+          </Link>
+        </div>
+        <h1 className="text-2xl font-bold tracking-tight mb-2">{post.title}</h1>
+        <p className="text-[#525252] text-sm mb-10">{post.date}</p>
         <div
           className="prose"
           dangerouslySetInnerHTML={{ __html: post.content }}
@@ -27,7 +36,7 @@ export default function MLPost({ post }: MLPostProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = getMLPosts();
+  const posts = getLabPosts();
   const paths = posts.map((post) => ({
     params: { slug: post.slug },
   }));
@@ -37,7 +46,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // @ts-ignore
-  const post = await getMlPost(params.slug as string);
+  const post = await getLabPost(params.slug as string);
 
   if (!post) {
     return {

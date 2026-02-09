@@ -1,9 +1,9 @@
 - Engineer with skill issues, want to make machines learn.
-- (wannabe) Musician, trying to make some bass.
+- Amateur musician, making some bass.
 - Biker, huge fan of all things automotive.
 - Weekends, I glue myself to the deadly motorsport races.
 - Reinforcement Learning fascinates me lately.
 - Adrenaline junkie, like to live on the edge.
-- Currently reading the "DUNE".
+- Currently reading "Crime and Punishment" by Fyodor Dostoevsky.
 - [Find my shitty code here](https://github.com/ExpressGradient)
 - [Find my shitposting here](https://x.com/ExpressGradient)

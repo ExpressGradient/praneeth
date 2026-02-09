@@ -2,14 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: #0a0a0a;
+  color: #ededed;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ededed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #333;
+  color: #fff;
+}
+
 .prose {
   @apply max-w-none;
+  color: #d4d4d4;
 }
 
 .prose p {
-  @apply mb-4;
+  @apply mb-5 leading-relaxed;
 }
 
 .prose a {
-  @apply text-blue-600
+  color: #e5e5e5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #525252;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.prose a:hover {
+  text-decoration-color: #e5e5e5;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: #ededed;
+}
+
+.prose strong {
+  color: #ededed;
+}
+
+.prose code {
+  color: #d4d4d4;
+  background-color: #1a1a1a;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.prose pre {
+  background-color: #111;
+  border: 1px solid #262626;
+  border-radius: 6px;
+}
+
+.prose blockquote {
+  border-left-color: #333;
+  color: #a3a3a3;
+}
+
+.prose ul {
+  color: #d4d4d4;
+}
+
+.prose li {
+  @apply mb-1;
+}
+
+.prose hr {
+  border-color: #262626;
 }

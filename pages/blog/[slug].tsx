@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout";
+import Link from "next/link";
 import { getBlogPost, getBlogPosts } from "@/lib/blog";
 import type { GetStaticProps, GetStaticPaths } from "next";
 
@@ -13,10 +14,18 @@ interface BlogPostProps {
 
 export default function BlogPost({ post }: BlogPostProps) {
   return (
-    <Layout title={`${post.title}`}>
+    <Layout title={post.title}>
       <article>
-        <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-        <p className="text-gray-600 mb-4">{post.date}</p>
+        <div className="mb-10">
+          <Link
+            href="/blog"
+            className="text-[#525252] text-sm hover:text-[#a3a3a3] transition-colors duration-200"
+          >
+            &larr; back
+          </Link>
+        </div>
+        <h1 className="text-2xl font-bold tracking-tight mb-2">{post.title}</h1>
+        <p className="text-[#525252] text-sm mb-10">{post.date}</p>
         <div
           className="prose"
           dangerouslySetInnerHTML={{ __html: post.content }}
