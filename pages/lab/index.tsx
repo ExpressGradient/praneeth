@@ -1,16 +1,16 @@
 import Layout from "../../components/Layout";
 import Link from "next/link";
-import { getBlogPosts } from "../../lib/blog";
+import { getLabPosts } from "../../lib/lab";
 
-export default function BlogIndex({ posts }: any) {
+export default function LabIndex({ posts }: any) {
   return (
-    <Layout title="Blog">
-      <h1 className="text-2xl font-bold tracking-tight mb-10">blog</h1>
+    <Layout title="Lab">
+      <h1 className="text-2xl font-bold tracking-tight mb-10">lab</h1>
       <ul className="space-y-6">
         {posts.map((post: any) => (
           <li key={post.slug}>
             <Link
-              href={`/blog/${post.slug}`}
+              href={`/lab/${post.slug}`}
               className="group block -mx-3 px-3 py-2 rounded-md hover:bg-[#111] transition-all duration-200"
             >
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
@@ -30,7 +30,7 @@ export default function BlogIndex({ posts }: any) {
 }
 
 export async function getStaticProps() {
-  const posts = getBlogPosts();
+  const posts = getLabPosts();
   return {
     props: {
       posts,

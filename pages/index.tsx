@@ -11,9 +11,14 @@ interface HomeProps {
 export default function Home({ about }: HomeProps) {
   return (
     <Layout>
-      <h1 className="text-3xl font-extrabold mb-4">Diddigam Sai Praneeth</h1>
-      <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-2">About Me</h2>
+      <div className="mb-16">
+        <h1 className="text-2xl font-bold tracking-tight mb-1">
+          Diddigam Sai Praneeth
+        </h1>
+        <p className="text-[#525252] text-sm">engineer with skill issues</p>
+      </div>
+
+      <section>
         <div className="prose" dangerouslySetInnerHTML={{ __html: about }} />
       </section>
     </Layout>
