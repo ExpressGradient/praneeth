@@ -36,6 +36,14 @@ export default function Layout({
           <title>{title}</title>
           <meta name="description" content={description} />
           <link rel="icon" href="/favicon.ico" />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Sai Praneeth" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={description} />
+          <meta name="theme-color" content="#0a0a0a" />
         </Head>
 
         <header className="mb-16">

@@ -11,7 +11,7 @@ export default function LabIndex({ posts }: any) {
           <li key={post.slug}>
             <Link
               href={`/lab/${post.slug}`}
-              className="group block"
+              className="group block -mx-3 px-3 py-2 rounded-md hover:bg-[#111] transition-all duration-200"
             >
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
                 <h2 className="text-[#ededed] group-hover:text-[#a3a3a3] transition-colors duration-200">
