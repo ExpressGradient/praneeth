@@ -1,7 +1,7 @@
 - Writing GPU kernels, breaking LLMs into atomic pieces and making them go fast.
 - Post-training Claude models for Claude Code at Alignerr.
 - Amateur bassist.
-- Getting into endurance — mostly cycling.
+- Getting into endurance - mostly cycling.
 - Huge fan of all things automotive. Weekends glued to motorsport races.
 - Currently reading "Crime and Punishment" by Dostoevsky.
 - [shitty code](https://github.com/ExpressGradient) / [shitposting](https://x.com/ExpressGradient)
