@@ -4,4 +4,4 @@
 - Getting into endurance - mostly cycling.
 - Huge fan of all things automotive. Weekends glued to motorsport races.
 - Currently reading "Crime and Punishment" by Dostoevsky.
-- [shitty code](https://github.com/ExpressGradient) / [shitposting](https://x.com/ExpressGradient)
+- [shitty code](https://github.com/ExpressGradient) / [shitposting](https://x.com/ExpressGradient) / [hi@saipraneeth.in](mailto:hi@saipraneeth.in)
