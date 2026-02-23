@@ -76,12 +76,20 @@ export default function Layout({
           <p className="text-[#525252] text-xs">
             &copy; {new Date().getFullYear()} Sai Praneeth
           </p>
-          <Link
-            href="/api/admin"
-            className="text-[#525252] text-xs hover:text-[#a3a3a3] transition-colors duration-200"
-          >
-            admin
-          </Link>
+          <div className="flex items-center gap-4">
+            <a
+              href="mailto:hi@saipraneeth.in"
+              className="text-[#525252] text-xs hover:text-[#a3a3a3] transition-colors duration-200"
+            >
+              hi@saipraneeth.in
+            </a>
+            <Link
+              href="/api/admin"
+              className="text-[#525252] text-xs hover:text-[#a3a3a3] transition-colors duration-200"
+            >
+              admin
+            </Link>
+          </div>
         </footer>
       </div>
     </div>
