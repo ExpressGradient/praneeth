@@ -1,11 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { JetBrains_Mono } from "next/font/google";
-
-const jetbrains_mono = JetBrains_Mono({
-  subsets: ["latin"],
-});
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -29,7 +24,7 @@ export default function Layout({
 
   return (
     <div
-      className={`${jetbrains_mono.className} min-h-screen bg-[#0a0a0a] text-[#ededed]`}
+      className="font-sans min-h-screen bg-[#0a0a0a] text-[#ededed]"
     >
       <div className="max-w-2xl mx-auto px-6 py-12">
         <Head>
