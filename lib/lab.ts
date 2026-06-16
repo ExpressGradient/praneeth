@@ -6,7 +6,13 @@ import Markdoc from "@markdoc/markdoc";
 const postsDirectory = path.join(process.cwd(), "content", "lab");
 
 export function getLabPosts() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  if (!fs.existsSync(postsDirectory)) {
+    return [];
+  }
+
+  const fileNames = fs
+    .readdirSync(postsDirectory)
+    .filter((fileName) => fileName.endsWith(".md"));
   const allPostsData = fileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, "");
     const fullPath = path.join(postsDirectory, fileName);
