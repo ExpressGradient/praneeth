@@ -1,6 +1,6 @@
-- Writing GPU kernels, breaking LLMs into atomic pieces and making them go fast.
+- Baking GPU Kernels.
 - Amateur bassist.
-- Getting into endurance - mostly cycling.
-- Huge fan of all things automotive. Weekends glued to motorsport races.
+- Getting into endurance (Cycling).
+- Huge fan of all things automotive. Weekends glued to motorsports.
 - Currently reading "Crime and Punishment" by Dostoevsky.
 - [shitty code](https://github.com/ExpressGradient) / [shitposting](https://x.com/ExpressGradient) / [hi@saipraneeth.in](mailto:hi@saipraneeth.in)
