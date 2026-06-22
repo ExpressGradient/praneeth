@@ -8,8 +8,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      sans: ['"JetBrains Mono"', 'monospace'],
-      mono: ['"JetBrains Mono"', 'monospace'],
+      sans: ['"Reddit Mono"', 'monospace'],
+      mono: ['"Reddit Mono"', 'monospace'],
     },
     extend: {
       backgroundImage: {
