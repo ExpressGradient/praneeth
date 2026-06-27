@@ -23,10 +23,16 @@ export default function Layout({
   ];
 
   return (
-    <div
-      className="font-sans min-h-screen bg-[#0a0a0a] text-[#ededed]"
-    >
-      <div className="max-w-2xl mx-auto px-6 py-12">
+    <div className="relative min-h-screen overflow-hidden bg-[#0a0a0a] font-sans text-[#ededed]">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_18%_18%,rgba(115,115,115,0.14),transparent_28%),radial-gradient(circle_at_78%_4%,rgba(229,229,229,0.08),transparent_24%),linear-gradient(115deg,transparent_0%,transparent_44%,rgba(115,115,115,0.08)_45%,transparent_46%,transparent_100%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,0.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.7)_1px,transparent_1px)] [background-size:72px_72px] [mask-image:linear-gradient(to_bottom,black,transparent_70%)]"
+      />
+      <div className="relative z-10 max-w-2xl mx-auto px-6 py-12">
         <Head>
           <title>{title}</title>
           <meta name="description" content={description} />
@@ -45,9 +51,7 @@ export default function Layout({
           <nav className="flex items-center gap-6">
             {navItems.map((item) => {
               const isActive =
-                item.href === "/"
-                  ? path === "/"
-                  : path.startsWith(item.href);
+                item.href === "/" ? path === "/" : path.startsWith(item.href);
               return (
                 <Link
                   key={item.href}
