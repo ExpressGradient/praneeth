@@ -23,9 +23,7 @@ export default function Layout({
   ];
 
   return (
-    <div
-      className="font-sans min-h-screen bg-[#0a0a0a] text-[#ededed]"
-    >
+    <div className="font-sans min-h-screen bg-[#eff1f5] text-[#4c4f69]">
       <div className="max-w-2xl mx-auto px-6 py-12">
         <Head>
           <title>{title}</title>
@@ -38,7 +36,7 @@ export default function Layout({
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
-          <meta name="theme-color" content="#0a0a0a" />
+          <meta name="theme-color" content="#eff1f5" />
         </Head>
 
         <header className="mb-16">
@@ -54,8 +52,8 @@ export default function Layout({
                   href={item.href}
                   className={`text-sm transition-colors duration-200 ${
                     isActive
-                      ? "text-[#ededed]"
-                      : "text-[#737373] hover:text-[#a3a3a3]"
+                      ? "text-[#1e66f5]"
+                      : "text-[#6c6f85] hover:text-[#4c4f69]"
                   }`}
                 >
                   {item.label}
@@ -67,20 +65,20 @@ export default function Layout({
 
         <main>{children}</main>
 
-        <footer className="mt-20 pt-8 border-t border-[#1a1a1a] flex items-center justify-between">
-          <p className="text-[#525252] text-xs">
+        <footer className="mt-20 pt-8 border-t border-[#ccd0da] flex items-center justify-between">
+          <p className="text-[#8c8fa1] text-xs">
             &copy; {new Date().getFullYear()} Sai Praneeth
           </p>
           <div className="flex items-center gap-4">
             <a
               href="mailto:hi@saipraneeth.in"
-              className="text-[#525252] text-xs hover:text-[#a3a3a3] transition-colors duration-200"
+              className="text-[#8c8fa1] text-xs hover:text-[#1e66f5] transition-colors duration-200"
             >
               hi@saipraneeth.in
             </a>
             <Link
               href="/api/admin"
-              className="text-[#525252] text-xs hover:text-[#a3a3a3] transition-colors duration-200"
+              className="text-[#8c8fa1] text-xs hover:text-[#1e66f5] transition-colors duration-200"
             >
               admin
             </Link>
