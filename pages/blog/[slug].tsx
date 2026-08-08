@@ -19,13 +19,13 @@ export default function BlogPost({ post }: BlogPostProps) {
         <div className="mb-10">
           <Link
             href="/blog"
-            className="text-[#525252] text-sm hover:text-[#a3a3a3] transition-colors duration-200"
+            className="text-[#8c8fa1] text-sm hover:text-[#6c6f85] transition-colors duration-200"
           >
             &larr; back
           </Link>
         </div>
         <h1 className="text-2xl font-bold tracking-tight mb-2">{post.title}</h1>
-        <p className="text-[#525252] text-sm mb-10">{post.date}</p>
+        <p className="text-[#8c8fa1] text-sm mb-10">{post.date}</p>
         <div
           className="prose"
           dangerouslySetInnerHTML={{ __html: post.content }}
