@@ -1,6 +1,5 @@
-- Baking GPU Kernels.
+- Baking Inference Engines.
 - Amateur bassist.
-- Getting into endurance (Cycling).
 - Huge fan of all things automotive. Weekends glued to motorsports.
-- Currently reading "Crime and Punishment" by Dostoevsky.
+- Currently reading "Dune" by Frank Herbert.
 - [shitty code](https://github.com/ExpressGradient) / [shitposting](https://x.com/ExpressGradient) / [hi@saipraneeth.in](mailto:hi@saipraneeth.in)
