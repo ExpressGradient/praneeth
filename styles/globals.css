@@ -22,7 +22,7 @@ body {
 }
 
 .prose {
-  @apply max-w-none;
+  @apply max-w-none text-sm;
   color: #5c5f77;
 }
 

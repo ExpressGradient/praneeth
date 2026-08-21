@@ -1,0 +1,7 @@
+packages:
+  - "."
+
+minimumReleaseAge: 1440
+
+overrides:
+  js-yaml: 3.15.1
