@@ -2,4 +2,4 @@
 - Amateur bassist.
 - Huge fan of all things automotive. Weekends glued to motorsports.
 - Currently reading "Dune" by Frank Herbert.
-- [shitty code](https://github.com/ExpressGradient) / [shitposting](https://x.com/ExpressGradient) / [hi@saipraneeth.in](mailto:hi@saipraneeth.in)
+- [shitcode](https://github.com/ExpressGradient) / [shitposts](https://x.com/ExpressGradient) / [hi@saipraneeth.in](mailto:hi@saipraneeth.in)
