@@ -2,6 +2,7 @@
   "name": "praneeth",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.34.5",
   "engines": {
     "node": "24.x"
   },
@@ -30,5 +31,10 @@
     "prettier": "3.9.6",
     "tailwindcss": "3.4.19",
     "typescript": "5.9.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "js-yaml": "3.15.1"
+    }
   }
 }

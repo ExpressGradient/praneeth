@@ -3,5 +3,6 @@ packages:
 
 minimumReleaseAge: 1440
 
+# pnpm 10+ reads overrides here; package.json mirrors this for Vercel's pnpm 9 fallback.
 overrides:
   js-yaml: 3.15.1
