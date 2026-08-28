@@ -53,7 +53,7 @@ body {
 }
 
 .prose {
-  @apply max-w-none text-sm;
+  @apply max-w-none text-base;
   color: #5c5f77;
 }
 
