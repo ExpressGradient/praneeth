@@ -1,5 +1,6 @@
-- Baking Inference Engines.
+- Friendly systems unc.
 - Amateur bassist.
-- Huge fan of all things automotive. Weekends glued to motorsports.
+- Motorcycles and Motorsports.
 - Currently reading "Dune" by Frank Herbert.
+- Currently playing "Ghost of Yotei".
 - [shitcode](https://github.com/ExpressGradient) / [shitposts](https://x.com/ExpressGradient) / [hi@saipraneeth.in](mailto:hi@saipraneeth.in)

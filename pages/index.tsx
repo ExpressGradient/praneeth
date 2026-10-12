@@ -19,7 +19,10 @@ export default function Home({ about }: HomeProps) {
       </div>
 
       <section>
-        <div className="prose" dangerouslySetInnerHTML={{ __html: about }} />
+        <div
+          className="prose prose-about"
+          dangerouslySetInnerHTML={{ __html: about }}
+        />
       </section>
     </Layout>
   );

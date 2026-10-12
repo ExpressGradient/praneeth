@@ -1,33 +1,41 @@
 @font-face {
-  font-family: "Fantasque Sans Mono";
+  font-family: "Code Pro Narrow 5";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/fantasque-sans-mono/regular.woff2") format("woff2");
+  src: url("/fonts/code-pro-narrow-5/regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Fantasque Sans Mono";
+  font-family: "Code Pro Narrow 5";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/fantasque-sans-mono/italic.woff2") format("woff2");
+  src: url("/fonts/code-pro-narrow-5/italic.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Fantasque Sans Mono";
+  font-family: "Code Pro Narrow 5";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/fantasque-sans-mono/bold.woff2") format("woff2");
+  src: url("/fonts/code-pro-narrow-5/bold.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Fantasque Sans Mono";
+  font-family: "Code Pro Narrow 5";
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/fantasque-sans-mono/bold-italic.woff2") format("woff2");
+  src: url("/fonts/code-pro-narrow-5/bold-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Code Pro Narrow 5";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/code-pro-narrow-5/medium.woff2") format("woff2");
 }
 
 @tailwind base;
@@ -55,6 +63,10 @@ body {
 .prose {
   @apply max-w-none text-base;
   color: #5c5f77;
+}
+
+.prose-about {
+  @apply font-medium;
 }
 
 .prose p {

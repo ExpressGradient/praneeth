@@ -8,8 +8,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      sans: ['"Fantasque Sans Mono"', "ui-monospace", "monospace"],
-      mono: ['"Fantasque Sans Mono"', "ui-monospace", "monospace"],
+      sans: ['"Code Pro Narrow 5"', "ui-monospace", "monospace"],
+      mono: ['"Code Pro Narrow 5"', "ui-monospace", "monospace"],
     },
     extend: {
       backgroundImage: {
