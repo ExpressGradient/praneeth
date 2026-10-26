@@ -5,7 +5,7 @@ import { getLabPosts } from "../../lib/lab";
 export default function LabIndex({ posts }: any) {
   return (
     <Layout title="Lab">
-      <h1 className="text-2xl font-bold tracking-tight mb-10">lab</h1>
+      <h1 className="text-2xl font-bold tracking-tight mb-10">Lab</h1>
       <ul className="space-y-6">
         {posts.map((post: any) => (
           <li key={post.slug}>

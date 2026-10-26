@@ -17,9 +17,9 @@ export default function Layout({
   const path = router.pathname;
 
   const navItems = [
-    { href: "/", label: "home" },
-    { href: "/blog", label: "blog" },
-    { href: "/lab", label: "lab" },
+    { href: "/", label: "Home" },
+    { href: "/blog", label: "Blog" },
+    { href: "/lab", label: "Lab" },
   ];
 
   return (

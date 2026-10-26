@@ -5,7 +5,7 @@ import { getBlogPosts } from "../../lib/blog";
 export default function BlogIndex({ posts }: any) {
   return (
     <Layout title="Blog">
-      <h1 className="text-2xl font-bold tracking-tight mb-10">blog</h1>
+      <h1 className="text-2xl font-bold tracking-tight mb-10">Blog</h1>
       <ul className="space-y-6">
         {posts.map((post: any) => (
           <li key={post.slug}>
