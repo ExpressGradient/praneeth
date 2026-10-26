@@ -14,7 +14,7 @@ export default function LabIndex({ posts }: any) {
               className="group block -mx-3 px-3 py-2 rounded-md hover:bg-[#e6e9ef] transition-all duration-200"
             >
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                <h2 className="text-[#4c4f69] group-hover:text-[#6c6f85] transition-colors duration-200">
+                <h2 className="text-[#30323d] group-hover:text-[#6c6f85] transition-colors duration-200">
                   {post.title}
                 </h2>
                 <span className="text-[#8c8fa1] text-sm shrink-0">

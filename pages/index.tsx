@@ -15,12 +15,12 @@ export default function Home({ about }: HomeProps) {
         <h1 className="text-2xl font-bold tracking-tight mb-1">
           Diddigam Sai Praneeth
         </h1>
-        <p className="text-[#8c8fa1] text-sm">engineer with skill issues</p>
+        <p className="text-[#6c6f85] text-[15px]">engineer with skill issues</p>
       </div>
 
       <section>
         <div
-          className="prose prose-about"
+          className="prose"
           dangerouslySetInnerHTML={{ __html: about }}
         />
       </section>

@@ -23,7 +23,7 @@ export default function Layout({
   ];
 
   return (
-    <div className="font-sans min-h-screen bg-[#eff1f5] text-[#4c4f69]">
+    <div className="font-sans min-h-screen bg-[#eff1f5] text-[15px] text-[#30323d]">
       <div className="max-w-2xl mx-auto px-6 py-12">
         <Head>
           <title>{title}</title>
@@ -50,10 +50,10 @@ export default function Layout({
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm transition-colors duration-200 ${
+                  className={`text-[15px] leading-normal transition-colors duration-200 ${
                     isActive
                       ? "text-[#1e66f5]"
-                      : "text-[#6c6f85] hover:text-[#4c4f69]"
+                      : "text-[#6c6f85] hover:text-[#30323d]"
                   }`}
                 >
                   {item.label}

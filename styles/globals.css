@@ -44,12 +44,12 @@
 
 html {
   background-color: #eff1f5;
-  color: #4c4f69;
+  color: #30323d;
 }
 
 body {
   background-color: #eff1f5;
-  color: #4c4f69;
+  color: #30323d;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -61,19 +61,16 @@ body {
 }
 
 .prose {
-  @apply max-w-none text-base;
-  color: #5c5f77;
-}
-
-.prose-about {
-  @apply font-normal;
+  @apply max-w-none text-[15px] font-normal leading-[1.65];
+  color: #30323d;
 }
 
 .prose p {
-  @apply mb-5 leading-relaxed;
+  @apply mb-5;
 }
 
 .prose a {
+  @apply font-normal;
   color: #1e66f5;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -89,11 +86,29 @@ body {
 .prose h2,
 .prose h3,
 .prose h4 {
-  color: #4c4f69;
+  @apply font-bold;
+  color: #30323d;
+}
+
+.prose h1 {
+  @apply text-2xl leading-tight;
+}
+
+.prose h2 {
+  @apply text-xl leading-snug;
+}
+
+.prose h3 {
+  @apply text-lg leading-snug;
+}
+
+.prose h4 {
+  @apply text-[17px] leading-normal;
 }
 
 .prose strong {
-  color: #4c4f69;
+  @apply font-bold;
+  color: #30323d;
 }
 
 .prose code {
@@ -116,7 +131,11 @@ body {
 }
 
 .prose ul {
-  color: #5c5f77;
+  color: inherit;
+}
+
+.prose :where(ul, ol) > li::marker {
+  color: #6c6f85;
 }
 
 .prose li {
