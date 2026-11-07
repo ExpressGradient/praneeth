@@ -2,39 +2,37 @@
   "name": "praneeth",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@10.34.5",
+  "packageManager": "bun@1.4.4",
   "engines": {
-    "node": "24.x"
+    "node": "26.x"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build --webpack",
-    "start": "next start",
-    "lint": "eslint ."
+    "dev": "bun --bun next dev --webpack",
+    "build": "bun --bun next build --webpack",
+    "start": "bun --bun next start",
+    "lint": "bun --bun eslint ."
   },
   "dependencies": {
-    "@markdoc/markdoc": "0.5.9",
+    "@markdoc/markdoc": "0.5.11",
     "@vercel/analytics": "2.0.1",
     "gray-matter": "4.0.3",
-    "next": "16.3.1",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "next": "16.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "0.5.20",
-    "@types/node": "24.13.3",
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
-    "eslint": "9.39.5",
-    "eslint-config-next": "16.3.1",
-    "postcss": "8.5.26",
-    "prettier": "3.9.6",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "10.14.0",
+    "eslint-config-next": "16.4.5",
+    "postcss": "8.5.32",
+    "prettier": "3.9.10",
     "tailwindcss": "3.4.19",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
-  "pnpm": {
-    "overrides": {
-      "js-yaml": "3.15.1"
-    }
+  "overrides": {
+    "js-yaml": "3.15.2"
   }
 }
