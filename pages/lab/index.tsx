@@ -1,25 +1,22 @@
 import Layout from "../../components/Layout";
 import Link from "next/link";
 import { getLabPosts } from "../../lib/lab";
+import descriptions from "../../content/descriptions.json";
 
 export default function LabIndex({ posts }: any) {
   return (
-    <Layout title="Lab">
-      <h1 className="text-2xl font-bold tracking-tight mb-10">Lab</h1>
+    <Layout title="Lab" description={descriptions.lab}>
+      <h1 className="text-2xl font-bold tracking-tight mb-5">Lab</h1>
       <ul className="space-y-6">
         {posts.map((post: any) => (
           <li key={post.slug}>
             <Link
               href={`/lab/${post.slug}`}
-              className="group block -mx-3 px-3 py-2 rounded-md hover:bg-[#e6e9ef] transition-all duration-200"
+              className="post-link -mx-3 flex min-h-11 items-center rounded-md px-3 py-2"
             >
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                <h2 className="text-[#30323d] group-hover:text-[#6c6f85] transition-colors duration-200">
-                  {post.title}
-                </h2>
-                <span className="text-[#8c8fa1] text-sm shrink-0">
-                  {post.date}
-                </span>
+              <div className="flex w-full flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                <h2>{post.title}</h2>
+                <span className="shrink-0 text-sm">{post.date}</span>
               </div>
             </Link>
           </li>

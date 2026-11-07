@@ -8,24 +8,22 @@ interface LabPostProps {
     slug: string;
     title: string;
     date: string;
+    description: string | null;
     content: string;
   };
 }
 
 export default function LabPost({ post }: LabPostProps) {
   return (
-    <Layout title={post.title}>
+    <Layout title={post.title} description={post.description}>
       <article>
-        <div className="mb-10">
-          <Link
-            href="/lab"
-            className="text-[#8c8fa1] text-sm hover:text-[#6c6f85] transition-colors duration-200"
-          >
+        <div className="mb-4">
+          <Link href="/lab" className="site-link text-sm">
             &larr; back
           </Link>
         </div>
         <h1 className="text-2xl font-bold tracking-tight mb-2">{post.title}</h1>
-        <p className="text-[#8c8fa1] text-sm mb-10">{post.date}</p>
+        <p className="text-[#8c8fa1] text-sm mb-6">{post.date}</p>
         <div
           className="prose"
           dangerouslySetInnerHTML={{ __html: post.content }}

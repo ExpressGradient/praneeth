@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import Markdoc from "@markdoc/markdoc";
+import { readMarkdown } from "./markdown";
 
 const postsDirectory = path.join(process.cwd(), "content", "blog");
 
@@ -16,12 +16,12 @@ export function getBlogPosts() {
   const allPostsData = fileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, "");
     const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data, content } = matter(fileContents);
+    const { data, content, description } = readMarkdown(fullPath);
 
     return {
       slug,
       ...(data as { title: string; date: string }),
+      description,
       content,
     };
   });
@@ -31,8 +31,7 @@ export function getBlogPosts() {
 
 export async function getBlogPost(slug: string) {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+  const { data, content, description } = readMarkdown(fullPath);
 
   const ast = Markdoc.parse(content);
   const contentHtml = Markdoc.transform(ast);
@@ -40,6 +39,7 @@ export async function getBlogPost(slug: string) {
   return {
     slug,
     ...(data as { title: string; date: string }),
+    description,
     content: Markdoc.renderers.html(contentHtml),
   };
 }

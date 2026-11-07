@@ -1,6 +1,7 @@
 ---
 title: "Getting back"
 date: "2026-11-07"
+description: "A rough year. I still wanna comeback."
 ---
 
 I've been dealing with a lot of issues lately - my health, my career, my finances, and life in general. But I'm much more resilient now.

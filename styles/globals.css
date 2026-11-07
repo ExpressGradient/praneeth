@@ -42,6 +42,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --link-muted: #5c5f77;
+  --link-accent: #8839ef;
+}
+
 html {
   background-color: #eff1f5;
   color: #30323d;
@@ -60,6 +65,43 @@ body {
   color: #eff1f5;
 }
 
+a:focus-visible {
+  outline: 2px solid #1e66f5;
+  outline-offset: 3px;
+}
+
+.site-link,
+.post-link {
+  color: var(--link-muted);
+}
+
+.site-link-current,
+.prose a {
+  color: var(--link-accent);
+}
+
+.site-link-current,
+.site-link:is(:hover, :focus-visible),
+.post-link h2,
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-link:is(:hover, :focus-visible),
+.post-link:is(:hover, :focus-visible) h2,
+.prose a:is(:hover, :focus-visible) {
+  color: #4c4f69;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-link,
+  .post-link h2,
+  .prose a {
+    transition: color 200ms ease;
+  }
+}
+
 .prose {
   @apply max-w-none text-[15px] font-normal leading-[1.65];
   color: #30323d;
@@ -71,15 +113,6 @@ body {
 
 .prose a {
   @apply font-normal;
-  color: #1e66f5;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: #9ca0b0;
-  transition: text-decoration-color 0.2s ease;
-}
-
-.prose a:hover {
-  text-decoration-color: #1e66f5;
 }
 
 .prose h1,

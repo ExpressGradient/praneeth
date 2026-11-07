@@ -1,20 +1,22 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import descriptions from "../content/descriptions.json";
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
-  description?: string;
+  description?: string | null;
 }
 
 export default function Layout({
   children,
   title = "Sai Praneeth",
-  description = "Learn more about Sai Praneeth",
+  description,
 }: LayoutProps) {
   const router = useRouter();
   const path = router.pathname;
+  const metaDescription = description?.trim() || descriptions.default;
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -24,22 +26,22 @@ export default function Layout({
 
   return (
     <div className="font-sans min-h-screen bg-[#eff1f5] text-[15px] text-[#30323d]">
-      <div className="max-w-2xl mx-auto px-6 py-12">
+      <div className="max-w-2xl mx-auto px-6 pt-6 pb-12">
         <Head>
           <title>{title}</title>
-          <meta name="description" content={description} />
+          <meta name="description" content={metaDescription} />
           <link rel="icon" href="/favicon.ico" />
           <meta property="og:title" content={title} />
-          <meta property="og:description" content={description} />
+          <meta property="og:description" content={metaDescription} />
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Sai Praneeth" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:title" content={title} />
-          <meta name="twitter:description" content={description} />
+          <meta name="twitter:description" content={metaDescription} />
           <meta name="theme-color" content="#eff1f5" />
         </Head>
 
-        <header className="mb-16">
+        <header className="mb-8">
           <nav className="flex items-center gap-6">
             {navItems.map((item) => {
               const isActive =
@@ -50,11 +52,8 @@ export default function Layout({
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-[15px] leading-normal transition-colors duration-200 ${
-                    isActive
-                      ? "text-[#1e66f5]"
-                      : "text-[#6c6f85] hover:text-[#30323d]"
-                  }`}
+                  aria-current={path === item.href ? "page" : undefined}
+                  className={`site-link text-[15px] leading-normal${isActive ? " site-link-current" : ""}`}
                 >
                   {item.label}
                 </Link>
@@ -72,13 +71,13 @@ export default function Layout({
           <div className="flex items-center gap-4">
             <a
               href="mailto:hi@saipraneeth.in"
-              className="text-[#8c8fa1] text-xs hover:text-[#1e66f5] transition-colors duration-200"
+              className="site-link text-xs"
             >
               hi@saipraneeth.in
             </a>
             <Link
               href="/api/admin"
-              className="text-[#8c8fa1] text-xs hover:text-[#1e66f5] transition-colors duration-200"
+              className="site-link text-xs"
             >
               admin
             </Link>

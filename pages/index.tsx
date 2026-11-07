@@ -1,17 +1,17 @@
 import Layout from "../components/Layout";
-import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import Markdoc from "@markdoc/markdoc";
+import { readMarkdown } from "@/lib/markdown";
 
 interface HomeProps {
   about: string;
+  description: string | null;
 }
 
-export default function Home({ about }: HomeProps) {
+export default function Home({ about, description }: HomeProps) {
   return (
-    <Layout>
-      <div className="mb-16">
+    <Layout description={description}>
+      <div className="mb-8">
         <h1 className="text-2xl font-bold tracking-tight mb-1">
           Diddigam Sai Praneeth
         </h1>
@@ -30,8 +30,7 @@ export default function Home({ about }: HomeProps) {
 
 export async function getStaticProps() {
   const aboutPath = path.join(process.cwd(), "content", "about.md");
-  const fileContents = fs.readFileSync(aboutPath, "utf8");
-  const { content } = matter(fileContents);
+  const { content, description } = readMarkdown(aboutPath);
 
   const ast = Markdoc.parse(content);
   const transformedContent = Markdoc.transform(ast);
@@ -40,6 +39,7 @@ export async function getStaticProps() {
   return {
     props: {
       about: htmlContent,
+      description,
     },
   };
 }
